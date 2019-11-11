@@ -7,19 +7,19 @@ use App\Post;
 use App\User;
 
 return [
-    ['/hello', function(){
+    ['GET','/hello', function(){
         echo "hello";
     }],
-    ['/', function(){
+    ['GET','/', function(){
 
     }],
-    ['/world', [BaseController::class, 'show']],
-    ['/page1', [BaseController::class, 'page1']],
-    ['/posts', [PostController::class, 'index']],
-    ['/posts/show', [PostController::class, 'show']],
-    ['/posts/create', [PostController::class, 'create']],
-    ['/posts/store', [PostController::class, 'store']],
-    ['/posts/edit', [PostController::class, 'edit']],
-    ['/posts/modify', [PostController::class, 'modify']],
-    ['/posts/delete', [PostController::class, 'delete']],
+    ['GET','/world', [BaseController::class, 'show']],
+    ['GET','/page1', [BaseController::class, 'page1']],
+    ['GET','/posts', [PostController::class, 'index']],
+    ['GET','/posts/show', [PostController::class, 'show']],
+    ['GET','/posts/create', [PostController::class, 'create']],
+    ['POST','/posts/store', [PostController::class, 'store']],
+    ['GET','/posts/edit', [PostController::class, 'edit']],
+    ['POST','/posts/modify', [PostController::class, 'modify']],
+    ['GET','/posts/delete', [PostController::class, 'delete']],
 ];
