@@ -13,6 +13,7 @@ class Router
      */
     public function __construct($url)
     {
+        $url = explode('?', $url)[0];
         $this->url = $url;
         $this->routes = require('../routes.php');
     }
